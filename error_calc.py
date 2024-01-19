@@ -8,7 +8,11 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    return x / y
+    if y == 0:
+        return "Cannot divide by zero!"
+    #fixed the Zero Division error
+    else:
+        return x / y
 
 print("Simple Calculator")
 print("1. Add")
@@ -23,13 +27,13 @@ num2 = float(input("Enter second number: "))
 
 if choice == "1":
     result = add(num1, num2)
-    print("Result: " + result)
+    print(f"Result: {result}")#used f-string to correct type errors.
 elif choice == "2":
     result = subtract(num1, num2)
-    print("Result: " + result)
+    print(f"Result: {result}")#used f-string to correct type errors.
 elif choice == "3":
     result = multiply(num1, num2)
-    print("Result: " + result)
+    print(f"Result: {result}")#used f-string to correct type errors.
 elif choice == "4":
     result = divide(num1, num2)
-    print("Result: " + result)
+    print(f"Result: {result}")#used f-string to correct type errors.
