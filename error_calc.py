@@ -10,7 +10,7 @@ def multiply(x, y):
 def divide(x, y):
     if y == 0:
         return "Cannot divide by zero!"
-    #fixed the Zero Division error
+    #fixed the Zero Division error and informed user that their input cannot be divided by zero
     else:
         return x / y
 
@@ -21,6 +21,9 @@ print("3. Multiply")
 print("4. Divide")
 
 choice = input("Select operation (1/2/3/4): ")
+#fixed invalid input occurance and added a user-friendly message
+if choice != "1" "2" "3" "4":
+    print("Please enter a valid input (1,2,3,4)")
 
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
