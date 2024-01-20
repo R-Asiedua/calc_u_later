@@ -20,10 +20,14 @@ print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
 
-choice = input("Select operation (1/2/3/4): ")
 #fixed invalid input occurance and added a user-friendly message
-if choice != "1" "2" "3" "4":
-    print("Please enter a valid input (1,2,3,4)")
+#the program doesn't run until the correct input is received
+while True:
+    choice = input("Select operation (1/2/3/4): ")
+    if choice in ["1", "2", "3", "4"]:
+        break
+    else:
+        print("Please enter a valid input (1, 2, 3, 4)")
 
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
